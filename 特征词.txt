@@ -1,0 +1,27 @@
+微波炉 microwave
+质量 quality  	good : stainless  lasted	bad:broke break
+尺寸 capacity       	good: large  big		bad: small tiny
+售后 after_sale  	good:Warranty		bad:repaired
+功能 function	good:powerful useful		bad:useless incompetent
+价格 price		good:expensive costly		bad:cheap inexpensive
+
+奶嘴
+
+质量 quality 		good:months  lasted	bad:broke break
+尺寸 size  			good:big large		bad:little small
+外观 appearant		good:cut pretty		bad:ugly unlovely
+卫生 health		good:health clean		bad:dirty unsafe 
+质地 texture		good:soft 0plastic		bad:hard material
+
+(0.8*r+0.2*s）
+r=reputation
+s=star
+r=(round((sum(powerful)+sum(durability)+sum(price)+sum(comfortable)+sum(appearance))/count(*),1)/2+2.5)*0.8
+横坐标就是时间季度
+
+一个贝叶斯网络是一个有向无环图(Directed Acyclic Graph,DAG),由代表变量结点及连接这些结点有向边构成。
+结点代表随机变量，结点间的有向边代表了结点间的互相关系(由父结点指向其子结点)，用条件概率进行表达关系强度，
+没有父结点的用先验概率进行信息表达。结点变量可以是任何问题的抽象。令G= (I,E) 表示一个有向无环图（DAG），其中I代表图中所有的结点的集合，而E代表有向连接线段的集合，且令X= (Xi)i∈I为其有向无环图中的某一结点i所代表之随机变量，若结点X的联合概率分布可以表示成：
+则称 X 为相对于一有向无环图 G 的贝叶斯网络，其中表示结点i 之“因”。
+对任意的随机变量，其联合分布可由各自的局部条件概率分布相乘而得出：
+
